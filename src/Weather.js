@@ -82,10 +82,10 @@ export default function Weather() {
                         <p className="date" id="current-date">02.11.2022
                         </p>
                         <p className="sun-status" id="sun-status">
-                            <img className="weather-icon" id="weather-icon" /><span id="weather-description">sunny</span>
+                            <img className="weather-icon" id="weather-icon" alt="weather description icon" /><span id="weather-description">sunny</span>
                         </p>
                         <p className="temperature" id="current-temperature">
-                            <span id="degrees">10</span><a href="#" id="unit-of-measurement">°C</a>
+                            <span id="degrees">10</span><a href="/" id="unit-of-measurement">°C</a>
                         </p>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ export default function Weather() {
             </div>
             <div className="footer">
                 <h6 className="created-by">
-                    Created by Anna Sitailo <i className="col fa fa-github" id="github" aria-hidden="true"></i>: <a href="https://github.com/annasitail/homework4-react" target="_blank">github.com/annasitail</a>
+                    Created by Anna Sitailo <i className="col fa fa-github" id="github" aria-hidden="true"></i>: <a href="https://github.com/annasitail/homework4-react" target="_blank" rel="noreferrer">github.com/annasitail</a>
                 </h6>
             </div>
         </div>
