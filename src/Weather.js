@@ -1,36 +1,36 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+// import axios from "axios";
 
 // import "./Weather.css";
 
 export default function Weather() {
-    const [city, setCity] = useState("Kyiv");
-    // const [loaded, setLoaded] = useState(false);
-    const [weather, setWeather] = useState({});
+    // const [city, setCity] = useState("Kyiv");
+    // // const [loaded, setLoaded] = useState(false);
+    // const [weather, setWeather] = useState({});
 
-    function displayWeather(response) {
-        // setLoaded(true);
-        setWeather({
-        temperature: response.data.main.temp,
-        wind: response.data.wind.speed,
-        humidity: response.data.main.humidity,
-        icon: `http://openweathermap.org/img/wn/${
-            response.data.weather[0].icon
-        }@2x.png`,
-        description: response.data.weather[0].description
-        });
-    }
+    // function displayWeather(response) {
+    //     // setLoaded(true);
+    //     setWeather({
+    //     temperature: response.data.main.temp,
+    //     wind: response.data.wind.speed,
+    //     humidity: response.data.main.humidity,
+    //     icon: `http://openweathermap.org/img/wn/${
+    //         response.data.weather[0].icon
+    //     }@2x.png`,
+    //     description: response.data.weather[0].description
+    //     });
+    // }
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        let apiKey = "094780c710fa4efd669f0df8c3991927";
-        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-        axios.get(apiUrl).then(displayWeather);
-    }
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     let apiKey = "094780c710fa4efd669f0df8c3991927";
+    //     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    //     axios.get(apiUrl).then(displayWeather);
+    // }
 
-    function updateCity(event) {
-        setCity(event.target.value);
-    }
+    // function updateCity(event) {
+    //     setCity(event.target.value);
+    // }
 
     // let form = (
     //     <div>
@@ -42,7 +42,7 @@ export default function Weather() {
     //     </div>
     // );
 
-    if (weather.temperature) {
+    // if (weather.temperature) {
         return (
         <div>
             <div className="header">
@@ -51,7 +51,7 @@ export default function Weather() {
                 </h1>
                 <hr />
                 <div className="row search">
-                    <form type="submit" onSubmit={handleSubmit} className="row col-10 search-form" id="search-form">
+                    <form type="submit" className="row col-10 search-form" id="search-form">
                         <div className="col search-button">
                             <button className="btn btn-info" id="search-button">
                                 Search
@@ -63,7 +63,6 @@ export default function Weather() {
                             id="city-input"
                             className="search-line"
                             placeholder="Type in your city"
-                            onChange={updateCity}
                             />
                         </div>
                     </form>
@@ -77,16 +76,16 @@ export default function Weather() {
             <div className="body">
                 <div className="row forecast-of-today">
                     <div className="col location">
-                        <h1 className="city" id="city-name">{city}</h1>
+                        <h1 className="city" id="city-name">Kyiv</h1>
                     </div>
                     <div className="col weather">
-                        <p className="date" id="current-date">
+                        <p className="date" id="current-date">02.11.2022
                         </p>
                         <p className="sun-status" id="sun-status">
-                            <img className="weather-icon" id="weather-icon" src={weather.icon} alt={weather.description} /><span id="weather-description">{weather.description}</span>
+                            <img className="weather-icon" id="weather-icon" /><span id="weather-description">sunny</span>
                         </p>
                         <p className="temperature" id="current-temperature">
-                            <span id="degrees">{Math.round(weather.temperature)}</span><a href="#" id="unit-of-measurement">°C</a>
+                            <span id="degrees">10</span><a href="#" id="unit-of-measurement">°C</a>
                         </p>
                     </div>
                 </div>
@@ -107,5 +106,5 @@ export default function Weather() {
         );
     // } else {
     //     return form;
-    }
+    // }
 }
