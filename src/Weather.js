@@ -33,16 +33,18 @@ export default function Weather() {
     }
 
     let form = (
-        <form onSubmit={handleSubmit}>
-        <input type="search" placeholder="Enter a city.." onChange={updateCity} />
-        <button type="Submit">Search</button>
-        </form>
+        <div>
+            <h1>Forecast</h1>
+            <form onSubmit={handleSubmit}>
+                <input type="search" placeholder="Enter a city.." onChange={updateCity} />
+            <button type="Submit">Search</button>
+            </form>
+        </div>
     );
 
     if (loaded) {
         return (
         <div>
-            <h1>Forecast</h1>
             {form}
             <ul>
             <li>Temperature: {Math.round(weather.temperature)}°C</li>
