@@ -42,7 +42,7 @@ export default function Weather() {
     //     </div>
     // );
 
-    if (temperature) {
+    if (weather.temperature) {
         return (
         <div>
             <div className="header">
