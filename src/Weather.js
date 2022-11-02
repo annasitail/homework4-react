@@ -5,11 +5,11 @@ import axios from "axios";
 
 export default function Weather() {
     const [city, setCity] = useState("Kyiv");
-    const [loaded, setLoaded] = useState(false);
+    // const [loaded, setLoaded] = useState(false);
     const [weather, setWeather] = useState({});
 
     function displayWeather(response) {
-        setLoaded(true);
+        // setLoaded(true);
         setWeather({
         temperature: response.data.main.temp,
         wind: response.data.wind.speed,
