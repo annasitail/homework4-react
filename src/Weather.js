@@ -42,7 +42,7 @@ export default function Weather() {
     //     </div>
     // );
 
-    // if (loaded) {
+    if (temperature) {
         return (
         <div>
             <div className="header">
@@ -107,5 +107,5 @@ export default function Weather() {
         );
     // } else {
     //     return form;
-    // }
+    }
 }
