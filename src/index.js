@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
 import './index.css';
 // import App from './App';
 import Weather from './Weather';
 import reportWebVitals from './reportWebVitals';
 
 import "./Weather.css";
-import 'bootstrap/dist/css/bootstrap.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
